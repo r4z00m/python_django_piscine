@@ -100,5 +100,5 @@ if __name__ == '__main__':
                 content=[Elem(tag='head', content=Elem(tag='title', content=Text('"Hello ground!"'))),
                          Elem(tag='body', content=[Elem(tag='h1', content=Text('"Oh no, not again!"')),
                                                    Elem(tag='img', attr={'src': 'https://i.imgur.com/pfp3T.jpg'},
-                                                        tag_type='simple')])],tag_type='double')
+                                                        tag_type='simple')])], tag_type='double')
     print(html)
