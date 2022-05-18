@@ -1,0 +1,7 @@
+title = "My resume"
+name = "Tom"
+surname = "Hardy"
+age = "33"
+skill1 = "playboy"
+skill2 = "philanthropist"
+pro = "actor"

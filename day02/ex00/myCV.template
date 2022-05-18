@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{title}</title>
+</head>
+<body>
+<p>Name: {name}</p>
+<p>Lastname: {surname}</p>
+<p>Age: {age}</p>
+<p>Skills:</p>
+<ul>
+    <li>{skill1}</li>
+    <li>{skill2}</li>
+</ul>
+<p>Profession: {pro}</p>
+</body>
+</html>
