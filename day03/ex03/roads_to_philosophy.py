@@ -18,7 +18,6 @@ def get_new_url(document, road):
                         and not a['href'].startswith('/wiki/Wikipedia:') and not a['href'].startswith('/wiki/Help:')\
                         and '.' not in a['href'] and ':' not in a['href']:
                     end = a['href'].replace('/wiki/', '')
-                    print(end)
                     if end.replace('_', ' ') in road:
                         print("It leads to an infinite loop !")
                         sys.exit()
