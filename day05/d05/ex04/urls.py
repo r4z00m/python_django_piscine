@@ -5,5 +5,5 @@ urlpatterns = [
     path('init/', views.db_init),
     path('populate/', views.populate),
     path('display/', views.display),
-    path('remove/', views.remove, name='remove'),
+    path('remove/', views.remove, name='remove04'),
 ]

@@ -89,8 +89,8 @@ class RemoveView(ListView):
         try:
             data = Movies.objects.all()
             if len(data) == 0:
-                return redirect('remove')
+                return redirect('remove05')
         except Exception as e:
-            return redirect('remove')
+            return redirect('remove05')
         Movies.objects.filter(title=request.POST['title']).delete()
-        return redirect('remove')
+        return redirect('remove05')
