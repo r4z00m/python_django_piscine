@@ -1,12 +1,8 @@
 from django.http import HttpResponse
-from django.views.generic import View, ListView
-import psycopg2
-from django.conf import settings
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from . import forms
-from .forms import RemoveForm
+from django.views.generic import ListView
 
+from .forms import RemoveForm
 from .models import Movies
 
 

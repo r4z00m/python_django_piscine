@@ -21,9 +21,6 @@ def db_init(request):
 
 
 def populate(request):
-    db = settings.DATABASES['default']
-    connect = psycopg2.connect(dbname=db['NAME'], user=db['USER'], password=db['PASSWORD'],
-                               host=db['HOST'], port=db['PORT'])
     movies = [
         {
             'episode_nb': 1,
@@ -71,6 +68,9 @@ def populate(request):
     ]
     count = 0
     try:
+        db = settings.DATABASES['default']
+        connect = psycopg2.connect(dbname=db['NAME'], user=db['USER'], password=db['PASSWORD'],
+                                   host=db['HOST'], port=db['PORT'])
         with connect.cursor() as db_connect:
             for elem in movies:
                 db_connect.execute(f"SELECT title FROM ex02_movies WHERE episode_nb={elem['episode_nb']};")
@@ -91,10 +91,10 @@ def populate(request):
 
 
 def display(request):
-    db = settings.DATABASES['default']
-    connect = psycopg2.connect(dbname=db['NAME'], user=db['USER'], password=db['PASSWORD'],
-                               host=db['HOST'], port=db['PORT'])
     try:
+        db = settings.DATABASES['default']
+        connect = psycopg2.connect(dbname=db['NAME'], user=db['USER'], password=db['PASSWORD'],
+                                   host=db['HOST'], port=db['PORT'])
         with connect.cursor() as db_connect:
             db_connect.execute("SELECT * FROM ex02_movies;")
             data = db_connect.fetchall()
