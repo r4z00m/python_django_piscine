@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% if data %}
+    <table>
+        <th>Episode_nb</th>
+        <th>Title</th>
+        <th>Opening_crawl</th>
+        <th>Director</th>
+        <th>Producer</th>
+        <th>Release_date</th>
+    {% for items in data %}
+    <tr>
+        <td>{{ items.episode_nb }}</td>
+        <td>{{ items.title }}</td>
+        <td>{{ items.opening_crawl }}</td>
+        <td>{{ items.director }}</td>
+        <td>{{ items.producer }}</td>
+        <td>{{ items.release_date }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No data available</p>
+{% endif %}
+</body>
+</html>
