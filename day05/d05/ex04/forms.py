@@ -7,4 +7,3 @@ class RemoveForm(forms.Form):
     def __init__(self, choices, *args, **kwargs):
         super(RemoveForm, self).__init__(*args, **kwargs)
         self.fields['title'].choices = choices
-
