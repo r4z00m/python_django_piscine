@@ -11,7 +11,7 @@ def db_init(request):
                                    host=db['HOST'], port=db['PORT'])
         with connect.cursor() as db_connect:
             db_connect.execute("CREATE TABLE IF NOT EXISTS ex02_movies (episode_nb INT PRIMARY KEY, "
-                               "title VARCHAR(64) UNIQUE NOT NULL, director VARCHAR(32) NOT NULL, "
+                               "title VARCHAR(64) UNIQUE NOT NULL, opening_crawl TEXT, director VARCHAR(32) NOT NULL, "
                                "producer VARCHAR(128) NOT NULL, release_date DATE NOT NULL);")
             connect.commit()
             connect.close()
